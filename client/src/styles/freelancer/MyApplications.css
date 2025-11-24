@@ -1,0 +1,189 @@
+
+.user-applications-page {
+    padding: 3vh 3vw; 
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); 
+    min-height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.user-applications-page h3 {
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    font-weight: 700;
+    text-align: center; 
+}
+
+.user-applications-body {
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 4px 8px 0px, rgba(14, 30, 37, 0.32) 0px 4px 20px 0px; 
+    height: auto; 
+    max-height: 80vh; 
+    border-radius: 1rem; 
+    margin-top: 2vh;
+    padding: 20px; 
+    overflow-y: auto;
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(52, 152, 219, 0.1);
+    width: 100%;
+    max-width: 1000px; 
+    display: grid; 
+    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr)); 
+    gap: 20px;
+    animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.user-application {
+    padding: 20px; 
+    cursor: pointer;
+    border-radius: 1rem;
+    background: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(52, 152, 219, 0.1);
+    transition: all 0.3s ease;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 2px 4px;
+}
+
+.user-application:hover {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 50%); 
+    transform: translateY(-5px); 
+    box-shadow: 0 6px 20px rgba(52, 152, 219, 0.2);
+}
+
+.user-application-body {
+    display: flex;
+    flex-direction: column; 
+    gap: 15px; 
+}
+
+.user-application hr {
+    height: 1px;
+    background: linear-gradient(to right, #3498db, #e74c3c); 
+    width: 100%;
+    margin: 15px 0; 
+    border: none;
+}
+
+.vertical-line {
+    display: none; 
+}
+
+.user-application-half {
+    width: 100%; 
+}
+
+.user-application-half h4 {
+    font-size: 1.4rem;
+    color: #3498db; 
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.user-application-half p {
+    font-size: 1rem; 
+    color: #34495e;
+    line-height: 1.4;
+}
+
+.user-application-half h5 {
+    font-size: 1.1rem; 
+    color: #2c3e50;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.user-application-half h5 b {
+    font-size: 1.1rem;
+    color: #3498db; 
+    font-weight: 700;
+}
+
+.user-application-half span h5 {
+    font-size: 1.2rem;
+    color: #2c3e50;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.user-application-half span p {
+    font-size: 1rem;
+    color: #7f8c8d;
+    line-height: 1.4;
+}
+
+.user-application-half span .application-skills {
+    display: flex;
+    gap: 12px; 
+    flex-wrap: wrap; 
+    margin-top: 10px;
+}
+
+.user-application-half span .application-skills p {
+    color: #e74c3c; 
+    border: 2px solid #e74c3c;
+    padding: 6px 12px; 
+    border-radius: 2rem; 
+    font-size: 0.8rem; 
+    font-weight: 500;
+    background: rgba(231, 76, 60, 0.1);
+    transition: all 0.3s ease;
+}
+
+.user-application-half span .application-skills p:hover {
+    background: #e74c3c;
+    color: white;
+    transform: scale(1.05);
+}
+
+.user-application-half h6 {
+    font-size: 1rem; 
+    color: #34495e;
+    margin-top: 10px;
+    font-weight: 500;
+}
+
+.user-application-half h6 b {
+    color: #7f8c8d;
+    font-weight: 600;
+}
+
+
+@media (max-width: 768px) {
+    .user-applications-page {
+        padding: 2vh 2vw;
+    }
+    .user-applications-page h3 {
+        font-size: 1.6rem;
+    }
+    .user-applications-body {
+        grid-template-columns: 1fr; 
+        max-height: none; 
+        padding: 15px;
+    }
+    .user-application {
+        padding: 15px;
+    }
+    .user-application-body {
+        gap: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .user-applications-page h3 {
+        font-size: 1.4rem;
+    }
+    .user-application-half h4 {
+        font-size: 1.2rem;
+    }
+    .user-application-half span .application-skills p {
+        font-size: 0.7rem;
+        padding: 4px 8px;
+    }
+}

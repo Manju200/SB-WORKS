@@ -1,0 +1,111 @@
+
+.navbar {
+    height: 12vh; 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 3vw;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px; 
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px); 
+    border-bottom: 1px solid rgba(52, 152, 219, 0.2); 
+    position: sticky; 
+    top: 0;
+    z-index: 100;
+    transition: all 0.3s ease; 
+}
+
+.navbar:hover {
+    background: rgba(255, 255, 255, 0.98);
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 6px 20px;
+}
+
+.navbar h3 {
+    color: #3498db; 
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 2rem;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.navbar h3:hover {
+    color: #e74c3c;
+}
+
+.nav-options {
+    display: flex;
+    width: 50%;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.nav-options p {
+    margin: 0;
+    color: #7f8c8d;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    padding: 8px 12px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.nav-options p:hover {
+    color: #2c3e50;
+    font-weight: 600;
+    background: rgba(52, 152, 219, 0.1);
+    transform: translateY(-2px);
+}
+
+.nav-options p::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: #3498db;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.nav-options p:hover::after {
+    width: 100%;
+}
+
+
+@media (max-width: 768px) {
+    .navbar {
+        height: 10vh;
+        padding: 0 2vw;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .navbar h3 {
+        font-size: 1.8rem;
+        margin-bottom: 10px;
+    }
+    .nav-options {
+        width: 100%;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
+    .nav-options p {
+        font-size: 0.9rem;
+        padding: 6px 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar h3 {
+        font-size: 1.5rem;
+    }
+    .nav-options p {
+        font-size: 0.8rem;
+    }
+}
